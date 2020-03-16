@@ -81,6 +81,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
@@ -145,4 +146,38 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+/* 
+    This is a pseudo-class.
+    Pseudo-classes are special states of a selector
+
+    Transition needs to be on the initial state
+*/
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    margin: 50px;
+    border-radius: 50px;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+/* 
+    Move the button up
+*/
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: white;
+    color: #777;
 }
