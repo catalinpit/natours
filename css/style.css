@@ -148,6 +148,18 @@ body {
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 /* 
     This is a pseudo-class.
     Pseudo-classes are special states of a selector
@@ -163,6 +175,7 @@ body {
     margin: 50px;
     border-radius: 50px;
     transition: all .2s;
+    position: relative;
 }
 
 .btn:hover {
@@ -180,4 +193,49 @@ body {
 .btn-white {
     background-color: white;
     color: #777;
+}
+
+/* 
+    Pseudo-elements allow us to style certain parts of the elements
+    For example, the :after pseudo-element adds like a virtual element
+    right after the element we're selecting.
+
+    For an ::after element to appear on the page,
+    we need to specify its content property.
+*/
+.btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    /* 
+        With absolute positioning, it needs to have a reference.
+        The reference is the first element with the relative position that it can find.
+    */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*
+        Defines the position of the elements if they are one on top of the another.
+        This is behind the button.
+    */
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: white;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.2) scaleY(1.4);
+    opacity: 0;
+}
+
+.btn-animated {
+    /* Shorthand for animation-name, animation-duration, animation-timing-function, and animation-delay */
+    animation: moveInBottom 2.5s ease-out .75s;
+    /* Automatically apply the styles up to 0% before the animation starts */
+    animation-fill-mode: backwards;
 }
