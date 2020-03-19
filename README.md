@@ -12,6 +12,7 @@
 - [TABLE OF CONTENTS](#table-of-contents)
 - [THE THREE PILLARS TO WRITE GOOD HTML AND CSS](#the-three-pillars-to-write-good-html-and-css)
 - [HOW CSS WORKS: A LOOK BEHIND THE SCENES](#how-css-works-a-look-behind-the-scenes)
+- [HOW CSS VALUES ARE PARSED](#how-css-values-are-parsed)
 
 # THE THREE PILLARS TO WRITE GOOD HTML AND CSS
 
@@ -92,3 +93,22 @@ The last declaration in the code will override all the other declarations and wi
 * The universal selector `*` has no specificity value.
 * Rely more on **specificity** than on the **order** of selectors. 
 * Rely on order when using 3rd-party stylesheets - always put your author stylesheet last.
+
+# HOW CSS VALUES ARE PARSED
+
+* Each property has an initial value, used if nothing is declared (and if there is no inheritance).
+* Browsers specify a `root font-size` for each page (usually 16px).
+* Percentages and relative values are always converted to pixels. 
+* Percentages are measured relative to their parent's `font-size`, if used to specify `font-size`.
+* Percentages are measured relative to their parent's `width`, if used to specify lengths. 
+* `em` are measured relative to their **parent** `font-size`, if used to specify `font-size`.
+* `em` are measured relative to their **current** `font-size`, if used to specify `lengths`.
+* `rem` are always measured relative to the **document's root** `font-size`.
+* `vh` and `vw` are simply percentage measures of the viewport's `height` and `width`.
+
+* Inheritance passes the values for some specific properties from parents to children => **more maintainable code**.
+* Properties related to text are inherited: `font-family`, `font-size`, `color`, etc.
+* The computed value of a property is what gets inherited, **not** the declared value.
+* Inheritance of property only works if no one declares a value for that property. 
+* The `inherit` keyword forces inheritance on a certain property.
+* The `initial` keyword resets a property to its initial value.
