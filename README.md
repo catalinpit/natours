@@ -13,6 +13,13 @@
 - [THE THREE PILLARS TO WRITE GOOD HTML AND CSS](#the-three-pillars-to-write-good-html-and-css)
 - [HOW CSS WORKS: A LOOK BEHIND THE SCENES](#how-css-works-a-look-behind-the-scenes)
 - [HOW CSS VALUES ARE PARSED](#how-css-values-are-parsed)
+- [THE VISUAL FORMATTING MODEL](#the-visual-formatting-model)
+- [THE BOX MODEL](#the-box-model)
+  - [The box model: heights and widths](#the-box-model-heights-and-widths)
+  - [Box types: inline, block-level and inline-block](#box-types-inline-block-level-and-inline-block)
+    - [Block-level boxes](#block-level-boxes)
+    - [Inline-boxes](#inline-boxes)
+    - [Inline-block boxes](#inline-block-boxes)
 
 # THE THREE PILLARS TO WRITE GOOD HTML AND CSS
 
@@ -112,3 +119,71 @@ The last declaration in the code will override all the other declarations and wi
 * Inheritance of property only works if no one declares a value for that property. 
 * The `inherit` keyword forces inheritance on a certain property.
 * The `initial` keyword resets a property to its initial value.
+
+# THE VISUAL FORMATTING MODEL
+
+*"An algorithm that calculates boxes and determines the layout of these boxes, for each element in the render tree, in order to determine the final layout of the page."*
+
+* **Dimension of the boxes**: the box model;
+* **Box type**: inline, block and inline-block;
+* **Positioning scheme**: floats and positioning;
+* **Stacking contexts**;
+* Other elements in the render tree;
+* Viewport size, dimensions of images, etc.;
+
+# THE BOX MODEL
+
+One of the most fundamental parts of CSS.
+
+The box model is one of the factors that define how elements are displayed on a webpage and how are they sized,
+
+According to the box model, every element on a webpage can be seen as a rectangle box. 
+
+And each box can have a width, height, padding, margins and a border. 
+
+* **Content**: text, images, etc.
+* **Padding**: transparent area around the content, inside the box;
+* **Border**: goes around the padding and the content;
+* **Margin**: space between boxes;
+
+## The box model: heights and widths
+
+**total width**: right border + right padding + specified width + left padding + left border
+
+**total height**: top border + top padding + specified height + bottom padding + bottom border
+
+If we use the `border-sizing: border-box`, then the **total width** and **total height** becomes:
+
+**total width**: specified width
+
+**specified height**: specified height
+
+## Box types: inline, block-level and inline-block
+
+### Block-level boxes
+
+* Elements are formatted visually as blocks
+* 100% of parent's width
+* Vertically, one after another
+* Box-model applies as showed
+
+`display: block`
+
+### Inline-boxes
+
+* Content is distributed in lines
+* Occupies only content's space
+* No line-breaks
+* No heights and widths
+* Paddings and margins only horizontal (left and right)
+
+`display: inline`
+
+### Inline-block boxes
+
+* A mix of block and line
+* Occupies only content's space
+* No line-breaks
+* Box-model applies as showed
+
+`display: inline-block`
