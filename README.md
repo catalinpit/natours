@@ -1,11 +1,11 @@
 # natours
- Natours Project
+ Natours Project 🌍🌎🌏
 
-[Live Preview](https://catalinpit.github.io/natours/)
+[Live Preview](https://catalinpit.github.io/natours/) 🚀
 
-*Taking notes while building the application from Jonas's tutorial => [Advanced CSS and SASS](https://udemy.com/course/advanced-css-and-sass).*
+*Taking notes while building the application from Jonas's tutorial => [Advanced CSS and SASS](https://udemy.com/course/advanced-css-and-sass).* ‼️
 
-*The application might look different from the one from the tutorial. I am trying to change it as much as possible.*
+*The application might look different from the one from the tutorial. I am trying to change it as much as possible.* 👀
 
 # TABLE OF CONTENTS
 - [natours](#natours)
