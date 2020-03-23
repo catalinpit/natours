@@ -24,6 +24,7 @@
     - [Normal flow](#normal-flow)
     - [Floats](#floats)
     - [Absolute positioning](#absolute-positioning)
+- [BEM](#bem)
 
 # THE THREE PILLARS TO WRITE GOOD HTML AND CSS
 
@@ -227,3 +228,10 @@ float: right
 position: absolute
 position: fixed
 ```
+
+# BEM
+
+* It stands for **B**lock **E**lement **M**odifier 
+* **BLOCK**: standalone components should be meaningful on their own
+* **ELEMENT**: part of a block that has no standalone meaning
+* **MODIFIER**: a different version of a block or an element
