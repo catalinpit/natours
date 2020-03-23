@@ -20,6 +20,10 @@
     - [Block-level boxes](#block-level-boxes)
     - [Inline-boxes](#inline-boxes)
     - [Inline-block boxes](#inline-block-boxes)
+  - [Positioning schemes: normal flow, absolute positioning, and floats](#positioning-schemes-normal-flow-absolute-positioning-and-floats)
+    - [Normal flow](#normal-flow)
+    - [Floats](#floats)
+    - [Absolute positioning](#absolute-positioning)
 
 # THE THREE PILLARS TO WRITE GOOD HTML AND CSS
 
@@ -187,3 +191,39 @@ If we use the `border-sizing: border-box`, then the **total width** and **total 
 * Box-model applies as showed
 
 `display: inline-block`
+
+## Positioning schemes: normal flow, absolute positioning, and floats
+
+### Normal flow
+
+* Default positioning scheme
+* **NOT** floated
+* **NOT** absolutely positioned
+* Elements are laid out according to their source order
+
+```
+Default
+position: relative
+```
+
+### Floats
+
+* **Element is removed from the normal flow**
+* Text and inline elements will wrap around the floated element
+* The container will not adjust its height to the element
+
+```
+float: left
+float: right
+```
+
+### Absolute positioning
+
+* **Element is removed from the normal flow**
+* No impact on surrounding content or elements
+* We use `top`, `bottom`, `left` and `right` to offset the element from its relatively positioned container.
+
+```
+position: absolute
+position: fixed
+```
