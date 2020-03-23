@@ -11,14 +11,12 @@ Dark green: #28b485
     Normalize the CSS to make every browser render the page in the exact same way 
     The universal selector selects every element on the webpage and apply the declarations
 */
-* {
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
-    /* 
-        Change the box model so that the borders and paddings are no longer added to
-        the total width or the total height that we specify for a box.
-    */
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
@@ -38,6 +36,11 @@ body {
     color: #777;
     background: #000;
     /*padding: 3rem;*/
+    /* 
+        Change the box model so that the borders and paddings are no longer added to
+        the total width or the total height that we specify for a box.
+    */
+    box-sizing: border-box;
 }
 
 .header {
