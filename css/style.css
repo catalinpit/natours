@@ -6,7 +6,6 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
 /* 
     Normalize the CSS to make every browser render the page in the exact same way 
     The universal selector selects every element on the webpage and apply the declarations
@@ -14,157 +13,125 @@ Dark green: #28b485
 *,
 *::after,
 *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
-}
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
 
 html {
-    font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 /*
     The parent element of all the other elements
 */
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /*
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*
         The line height is 1.7 times bigger than the predefined (default) line height
     */
-    line-height: 1.7;
-    color: #777;
-    background: #000;
-    /*padding: 3rem;*/
-    /* 
+  line-height: 1.7;
+  color: #777;
+  background: #000;
+  /*padding: 3rem;*/
+  /* 
         Change the box model so that the borders and paddings are no longer added to
         the total width or the total height that we specify for a box.
     */
-    box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .header {
-    /*
+  /*
         At every point, the height of this box (element) should be 95% of the viewport height
     */
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba(126, 213, 111, 0.8), 
-        rgba(40, 180, 131, 0.8)), 
-        url(../img/hero.jpg);
-    /* 
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  /* 
         Whatever the width of the viewport (or the element), it will always 
         try to fit the element inside of the box
     */
-    background-size: cover;
-    background-position: top;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-}
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
 
 .header__logo-box {
-    /* 
+  /* 
         Guides itself by the parent element
         The parent element is the header in this case
         I need to add position: relative to the parent element
     */
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
 
 .header__logo {
-    height: 3.5rem;
-}
+  height: 3.5rem; }
 
 .header__text-box {
-    position: absolute;
-    /*
+  position: absolute;
+  /*
         40% top and 50% left from the parent element because of the position: absolute
         The parent element is the header
     */
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    /* 
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  /* 
         This property determines if the back part of an element when 
         we transform it is visible or hidden for the user
     */
-    backface-visibility: hidden;
-}
+  backface-visibility: hidden; }
 
 .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 900;
-    letter-spacing: 3.5rem;
-
-    animation-name: moveInLeft;
-    animation-duration: 2.5s;
-    animation-timing-function: ease-in-out;
-}
+  display: block;
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out; }
 
 .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-
-    animation: moveInRight 2.5s ease-in-out;
-}
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveInRight 2.5s ease-in-out; }
 
 /* ANIMATIONS */
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-14rem);
-    }
-
-    80% {
-        transform: translateX(1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-14rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(14rem);
-    }
-
-    80% {
-        transform: translateX(-1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(14rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(5rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /* 
     This is a pseudo-class.
@@ -174,33 +141,29 @@ body {
 */
 .btn:link,
 .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    margin: 5rem;
-    border-radius: 5rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-}
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  margin: 5rem;
+  border-radius: 5rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem; }
 
 .btn:hover {
-    transform: translateY(-.5rem);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.5);
-}
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
 
 /* 
     Move the button up
 */
 .btn:active {
-    transform: translateY(-.1rem);
-}
+  transform: translateY(-0.1rem); }
 
 .btn--white {
-    background-color: white;
-    color: #777;
-}
+  background-color: #fff;
+  color: #777; }
 
 /* 
     Pseudo-elements allow us to style certain parts of the elements
@@ -211,38 +174,34 @@ body {
     we need to specify its content property.
 */
 .btn::after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    /* 
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  /* 
         With absolute positioning, it needs to have a reference.
         The reference is the first element with the relative position that it can find.
     */
-    position: absolute;
-    top: 0;
-    left: 0;
-    /*
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*
         Defines the position of the elements if they are one on top of the another.
         This is behind the button.
     */
-    z-index: -1;
-    transition: all .4s;
-}
+  z-index: -1;
+  transition: all .4s; }
 
 .btn--white::after {
-    background-color: white;
-}
+  background-color: #fff; }
 
 .btn:hover::after {
-    transform: scaleX(1.2) scaleY(1.4);
-    opacity: 0;
-}
+  transform: scaleX(1.2) scaleY(1.4);
+  opacity: 0; }
 
 .btn--animated {
-    /* Shorthand for animation-name, animation-duration, animation-timing-function, and animation-delay */
-    animation: moveInBottom 2.5s ease-out .75s;
-    /* Automatically apply the styles up to 0% before the animation starts */
-    animation-fill-mode: backwards;
-}
+  /* Shorthand for animation-name, animation-duration, animation-timing-function, and animation-delay */
+  animation: moveInBottom 2.5s ease-out .75s;
+  /* Automatically apply the styles up to 0% before the animation starts */
+  animation-fill-mode: backwards; }
