@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "A simple website for nature tours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catalinpit/natours.git"
+  },
+  "author": "Catalin Pit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catalinpit/natours/issues"
+  },
+  "homepage": "https://github.com/catalinpit/natours#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
