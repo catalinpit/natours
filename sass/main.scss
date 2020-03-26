@@ -8,8 +8,8 @@ Dark green: #28b485
 */
 
 $primary-color: #55c57a;
-$primary-color-light: #7ed56f;
-$primary-color-dark: #28b485;
+$primary-color-light: #E6DADA;
+$primary-color-dark: #274046;
 
 $color-grey-dark: #777;
 $color-white: #fff;
@@ -58,8 +58,8 @@ body {
     height: 100vh;
     background-image: linear-gradient(
         to right bottom, 
-        rgba($primary-color-light, 0.8), 
-        rgba($primary-color-dark, 0.8)), 
+        rgba($primary-color-light, 0.6), 
+        rgba($primary-color-dark, 0.6)), 
         url(../img/hero.jpg);
     /* 
         Whatever the width of the viewport (or the element), it will always 
@@ -68,7 +68,6 @@ body {
     background-size: cover;
     background-position: top;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
     &__logo-box {
         /* 
@@ -112,7 +111,8 @@ body {
         display: block;
         font-size: 6rem;
         font-weight: 900;
-        letter-spacing: 3.5rem;
+        letter-spacing: 2.5rem;
+        white-space: nowrap;
     
         animation-name: moveInLeft;
         animation-duration: 2.5s;
