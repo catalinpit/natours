@@ -13,6 +13,7 @@ $primary-color-dark: #28b485;
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 /* 
     Normalize the CSS to make every browser render the page in the exact same way 
@@ -54,7 +55,7 @@ body {
     /*
         At every point, the height of this box (element) should be 95% of the viewport height
     */
-    height: 95vh;
+    height: 100vh;
     background-image: linear-gradient(
         to right bottom, 
         rgba($primary-color-light, 0.8), 
@@ -68,33 +69,33 @@ body {
     background-position: top;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-}
 
-.header__logo-box {
-    /* 
-        Guides itself by the parent element
-        The parent element is the header in this case
-        I need to add position: relative to the parent element
-    */
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
+    &__logo-box {
+        /* 
+            Guides itself by the parent element
+            The parent element is the header in this case
+            I need to add position: relative to the parent element
+        */
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
 
-.header__logo {
-    height: 3.5rem;
-}
+    &__logo {
+        height: 3.5rem;
+    }
 
-.header__text-box {
-    position: absolute;
-    /*
-        40% top and 50% left from the parent element because of the position: absolute
-        The parent element is the header
-    */
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    &__text-box {
+        position: absolute;
+        /*
+            40% top and 50% left from the parent element because of the position: absolute
+            The parent element is the header
+        */
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 .heading-primary {
@@ -106,26 +107,26 @@ body {
         we transform it is visible or hidden for the user
     */
     backface-visibility: hidden;
-}
 
-.heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 900;
-    letter-spacing: 3.5rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 900;
+        letter-spacing: 3.5rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
+    }
 
-    animation-name: moveInLeft;
-    animation-duration: 2.5s;
-    animation-timing-function: ease-in-out;
-}
-
-.heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-
-    animation: moveInRight 2.5s ease-in-out;
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+    
+        animation: moveInRight 2.5s ease-in-out;
+    }
 }
 
 /* ANIMATIONS */
@@ -173,83 +174,85 @@ body {
     }
 }
 
-/* 
-    This is a pseudo-class.
-    Pseudo-classes are special states of a selector
-
-    Transition needs to be on the initial state
-*/
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    margin: 5rem;
-    border-radius: 5rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-}
-
-.btn:hover {
-    transform: translateY(-.5rem);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.5);
-}
-
-/* 
-    Move the button up
-*/
-.btn:active {
-    transform: translateY(-.1rem);
-}
-
-.btn--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-}
-
-/* 
-    Pseudo-elements allow us to style certain parts of the elements
-    For example, the :after pseudo-element adds like a virtual element
-    right after the element we're selecting.
-
-    For an ::after element to appear on the page,
-    we need to specify its content property.
-*/
-.btn::after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
+.btn {
     /* 
-        With absolute positioning, it needs to have a reference.
-        The reference is the first element with the relative position that it can find.
+        This is a pseudo-class.
+        Pseudo-classes are special states of a selector
+
+        Transition needs to be on the initial state
     */
-    position: absolute;
-    top: 0;
-    left: 0;
-    /*
-        Defines the position of the elements if they are one on top of the another.
-        This is behind the button.
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        margin: 5rem;
+        border-radius: 5rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        transform: translateY(-.5rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black,0.5);
+
+        &::after {
+            transform: scaleX(1.2) scaleY(1.4);
+            opacity: 0;
+        }
+    }
+
+    /* 
+        Move the button up
     */
-    z-index: -1;
-    transition: all .4s;
-}
+    &:active {
+        transform: translateY(-.1rem);
+    }
 
-.btn--white::after {
-    background-color: $color-white;
-}
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
 
-.btn:hover::after {
-    transform: scaleX(1.2) scaleY(1.4);
-    opacity: 0;
-}
-
-.btn--animated {
-    /* Shorthand for animation-name, animation-duration, animation-timing-function, and animation-delay */
-    animation: moveInBottom 2.5s ease-out .75s;
-    /* Automatically apply the styles up to 0% before the animation starts */
-    animation-fill-mode: backwards;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    
+    /* 
+        Pseudo-elements allow us to style certain parts of the elements
+        For example, the :after pseudo-element adds like a virtual element
+        right after the element we're selecting.
+    
+        For an ::after element to appear on the page,
+        we need to specify its content property.
+    */
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        /* 
+            With absolute positioning, it needs to have a reference.
+            The reference is the first element with the relative position that it can find.
+        */
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*
+            Defines the position of the elements if they are one on top of the another.
+            This is behind the button.
+        */
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--animated {
+        /* Shorthand for animation-name, animation-duration, animation-timing-function, and animation-delay */
+        animation: moveInBottom 2.5s ease-out .75s;
+        /* Automatically apply the styles up to 0% before the animation starts */
+        animation-fill-mode: backwards;
+    }
 }
