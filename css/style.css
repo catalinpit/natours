@@ -59,17 +59,18 @@ body {
             I need to add position: relative to the parent element
         */
     position: absolute;
-    top: 4rem;
-    left: 4rem; }
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .header__logo {
-    height: 3.5rem; }
+    height: 5.5rem; }
   .header__text-box {
     position: absolute;
     /*
             40% top and 50% left from the parent element because of the position: absolute
             The parent element is the header
         */
-    top: 40%;
+    top: 39%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
