@@ -1,0 +1,10 @@
+/* 
+    Append a pseudo-element after the element which will then clear these floats
+*/
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

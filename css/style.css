@@ -1,3 +1,9 @@
+/* COLORS */
+/* GRID VARIABLES */
+/* SPACE BETWEEN THE COLUMNS */
+/* 
+    Append a pseudo-element after the element which will then clear these floats
+*/
 /* 
     Normalize the CSS to make every browser render the page in the exact same way 
     The universal selector selects every element on the webpage and apply the declarations
@@ -62,8 +68,7 @@ body {
         The line height is 1.7 times bigger than the predefined (default) line height
     */
   line-height: 1.7;
-  color: #777;
-  background: #000; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -155,6 +160,53 @@ body {
     animation: moveInBottom 2.5s ease-out .75s;
     /* Automatically apply the styles up to 0% before the animation starts */
     animation-fill-mode: backwards; }
+
+.row {
+  /* 
+        If there is enough available space,
+        then it will have the width that we have specified.
+
+        If there isn't enough space (viewport smaller than what we specified here),
+        then it simply fills 100% of the available space.
+    */
+  max-width: 114rem;
+  background-color: #eee;
+  /*
+        Center block elements inside of another block element.
+    */
+  margin: 0 auto;
+  /* 
+        Apply the margin-bottom to all the elements except the last one.
+    */
+  /*
+        Select all the clasess that start with "col-"
+    */ }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orange;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.grid-test {
+  margin-top: 8rem; }
 
 .header {
   /*
