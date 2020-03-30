@@ -1,0 +1,45 @@
+/*
+    The parent element of all the other elements
+*/
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /*
+        The line height is 1.7 times bigger than the predefined (default) line height
+    */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    background: #000;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    /* 
+        This property determines if the back part of an element when 
+        we transform it is visible or hidden for the user
+    */
+    backface-visibility: hidden;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 900;
+        letter-spacing: 2.5rem;
+        white-space: nowrap;
+    
+        animation-name: moveInLeft;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+    
+        animation: moveInRight 2.5s ease-in-out;
+    }
+}

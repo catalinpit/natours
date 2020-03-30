@@ -1,0 +1,28 @@
+/* 
+    Normalize the CSS to make every browser render the page in the exact same way 
+    The universal selector selects every element on the webpage and apply the declarations
+*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* This defines what 1 REM is */
+    font-size: 62.5%;
+}
+
+/*
+    The parent element of all the other elements
+*/
+body {
+    //padding: 3rem;
+    /* 
+        Change the box model so that the borders and paddings are no longer added to
+        the total width or the total height that we specify for a box.
+    */
+    box-sizing: border-box;
+}

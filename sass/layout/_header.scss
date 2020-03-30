@@ -1,0 +1,46 @@
+.header {
+    /*
+        At every point, the height of this box (element) should be 95% of the viewport height
+    */
+    height: 100vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($primary-color-light, 0.6), 
+        rgba($primary-color-dark, 0.6)), 
+        url(../img/hero.jpg);
+    /* 
+        Whatever the width of the viewport (or the element), it will always 
+        try to fit the element inside of the box
+    */
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    &__logo-box {
+        /* 
+            Guides itself by the parent element
+            The parent element is the header in this case
+            I need to add position: relative to the parent element
+        */
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__logo {
+        height: 5.5rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        /*
+            40% top and 50% left from the parent element because of the position: absolute
+            The parent element is the header
+        */
+        top: 39%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

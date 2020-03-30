@@ -1,11 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 /* 
     Normalize the CSS to make every browser render the page in the exact same way 
     The universal selector selects every element on the webpage and apply the declarations
@@ -18,87 +10,18 @@ Dark green: #28b485
   box-sizing: inherit; }
 
 html {
+  /* This defines what 1 REM is */
   font-size: 62.5%; }
 
 /*
     The parent element of all the other elements
 */
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /*
-        The line height is 1.7 times bigger than the predefined (default) line height
-    */
-  line-height: 1.7;
-  color: #777;
-  background: #000;
-  /*padding: 3rem;*/
   /* 
         Change the box model so that the borders and paddings are no longer added to
         the total width or the total height that we specify for a box.
     */
   box-sizing: border-box; }
-
-.header {
-  /*
-        At every point, the height of this box (element) should be 95% of the viewport height
-    */
-  height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(230, 218, 218, 0.6), rgba(39, 64, 70, 0.6)), url(../img/hero.jpg);
-  /* 
-        Whatever the width of the viewport (or the element), it will always 
-        try to fit the element inside of the box
-    */
-  background-size: cover;
-  background-position: top;
-  position: relative; }
-  .header__logo-box {
-    /* 
-            Guides itself by the parent element
-            The parent element is the header in this case
-            I need to add position: relative to the parent element
-        */
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  .header__logo {
-    height: 5.5rem; }
-  .header__text-box {
-    position: absolute;
-    /*
-            40% top and 50% left from the parent element because of the position: absolute
-            The parent element is the header
-        */
-    top: 39%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  /* 
-        This property determines if the back part of an element when 
-        we transform it is visible or hidden for the user
-    */
-  backface-visibility: hidden; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 900;
-    letter-spacing: 2.5rem;
-    white-space: nowrap;
-    animation-name: moveInLeft;
-    animation-duration: 2.5s;
-    animation-timing-function: ease-in-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 2.5s ease-in-out; }
 
 /* ANIMATIONS */
 @keyframes moveInLeft {
@@ -128,6 +51,44 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+/*
+    The parent element of all the other elements
+*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*
+        The line height is 1.7 times bigger than the predefined (default) line height
+    */
+  line-height: 1.7;
+  color: #777;
+  background: #000; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  /* 
+        This property determines if the back part of an element when 
+        we transform it is visible or hidden for the user
+    */
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 2.5rem;
+    white-space: nowrap;
+    animation-name: moveInLeft;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 2.5s ease-in-out; }
 
 .btn {
   /* 
@@ -194,3 +155,39 @@ body {
     animation: moveInBottom 2.5s ease-out .75s;
     /* Automatically apply the styles up to 0% before the animation starts */
     animation-fill-mode: backwards; }
+
+.header {
+  /*
+        At every point, the height of this box (element) should be 95% of the viewport height
+    */
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(230, 218, 218, 0.6), rgba(39, 64, 70, 0.6)), url(../img/hero.jpg);
+  /* 
+        Whatever the width of the viewport (or the element), it will always 
+        try to fit the element inside of the box
+    */
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  .header__logo-box {
+    /* 
+            Guides itself by the parent element
+            The parent element is the header in this case
+            I need to add position: relative to the parent element
+        */
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .header__logo {
+    height: 5.5rem; }
+  .header__text-box {
+    position: absolute;
+    /*
+            40% top and 50% left from the parent element because of the position: absolute
+            The parent element is the header
+        */
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }

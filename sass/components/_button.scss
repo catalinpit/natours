@@ -1,0 +1,82 @@
+.btn {
+    /* 
+        This is a pseudo-class.
+        Pseudo-classes are special states of a selector
+
+        Transition needs to be on the initial state
+    */
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        margin: 5rem;
+        border-radius: 5rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        transform: translateY(-.5rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black,0.5);
+
+        &::after {
+            transform: scaleX(1.2) scaleY(1.4);
+            opacity: 0;
+        }
+    }
+
+    /* 
+        Move the button up
+    */
+    &:active {
+        transform: translateY(-.1rem);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    
+    /* 
+        Pseudo-elements allow us to style certain parts of the elements
+        For example, the :after pseudo-element adds like a virtual element
+        right after the element we're selecting.
+    
+        For an ::after element to appear on the page,
+        we need to specify its content property.
+    */
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        /* 
+            With absolute positioning, it needs to have a reference.
+            The reference is the first element with the relative position that it can find.
+        */
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*
+            Defines the position of the elements if they are one on top of the another.
+            This is behind the button.
+        */
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--animated {
+        /* Shorthand for animation-name, animation-duration, animation-timing-function, and animation-delay */
+        animation: moveInBottom 2.5s ease-out .75s;
+        /* Automatically apply the styles up to 0% before the animation starts */
+        animation-fill-mode: backwards;
+    }
+}
