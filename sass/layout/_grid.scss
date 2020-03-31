@@ -7,7 +7,6 @@
         then it simply fills 100% of the available space.
     */
     max-width: $grid-width;
-    background-color: #eee;
     /*
         Center block elements inside of another block element.
     */
@@ -26,7 +25,6 @@
         Select all the clasess that start with "col-"
     */
     [class^="col-"] {
-        background-color: orange;
         float: left;
 
         &:not(:last-child) {

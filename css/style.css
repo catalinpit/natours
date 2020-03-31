@@ -95,6 +95,27 @@ body {
     letter-spacing: 1.75rem;
     animation: moveInRight 2.5s ease-in-out; }
 
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #E6DADA, #274046);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .10s; }
+  .heading-secondary:hover {
+    transform: skewX(10deg) skewY(0.5deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
 .btn {
   /* 
         This is a pseudo-class.
@@ -170,7 +191,6 @@ body {
         then it simply fills 100% of the available space.
     */
   max-width: 114rem;
-  background-color: #eee;
   /*
         Center block elements inside of another block element.
     */
@@ -188,7 +208,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: orange;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
@@ -243,3 +262,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 20rem 0; }
