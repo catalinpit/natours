@@ -45,15 +45,16 @@ body {
 
 .heading-secondary {
     display: inline-block;
-    font-size: 3.5rem;
+    font-size: 5.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+    background-image: linear-gradient(to left, $primary-color-dark, $primary-color-dark);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     letter-spacing: 2px;
     transition: all .10s;
+    margin: -20rem 0 5rem;
 
     &:hover {
         transform: skewX(10deg) skewY(.5deg) scale(1.1);

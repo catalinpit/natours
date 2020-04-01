@@ -1,0 +1,52 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .5);
+        position: absolute;
+        border-radius: 3px;
+        transition: all .8s;
+        /* The space between the outline and the image itself */
+        outline-offset: 1rem;
+
+        &--pic1 {
+            left: 0;
+            top: 0rem;
+        }
+
+        &--pic2 {
+            right: -5rem;
+            top: 3rem;
+        }
+
+        &--pic3 {
+            left: 15rem;
+            top: 18rem;
+        }
+
+        &:hover {
+            /* 
+                The border-like effect on the image 
+            */
+            outline: .5rem solid $primary-color-dark;
+            /* 
+                Zoom the image and bring it up a little bit
+            */
+            transform: scale(1.2) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .7);
+            /* Make the image overlap the others */
+            z-index: 1;
+        }
+    }
+
+    /* 
+        When we hover the composition, we then select the composition photo which is not hovered.
+    */
+    &:hover &__photo:not(:hover) {
+        /* 
+            Make the other images smaller when hovering over an image
+        */
+        transform: scale(0.95);
+    }
+}

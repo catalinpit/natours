@@ -9,3 +9,10 @@
 .u-margin-bottom-small {
     margin-bottom: 1rem;
 }
+
+.card {
+    background: lighten($color-white, 20);
+    padding: 2.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 2rem rgba($color-black, .3);
+}
