@@ -15,4 +15,10 @@
     padding: 2.5rem;
     border-radius: .5rem;
     box-shadow: 0 .5rem 2rem rgba($color-black, .3);
+    border-top: .8rem solid $primary-color;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom: .8rem solid $primary-color;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
 }

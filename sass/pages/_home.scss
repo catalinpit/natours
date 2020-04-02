@@ -3,3 +3,26 @@
     padding: 20rem 0;
     //color: $color-white;
 }
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($primary-color-light, 0.6), 
+        rgba($primary-color-dark, 0.6)), 
+        url(../img/nat-4.jpg);
+    /* 
+        Whatever the width of the viewport (or the element), it will always 
+        try to fit the element inside of the box
+    */
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: 10rem;
+
+    /*
+        Select everything that is a direct child of section-features
+    */
+    & > * {
+        transform: skewY(7deg);
+    }
+}
