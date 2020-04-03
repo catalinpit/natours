@@ -3,10 +3,10 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 55rem;
 
     &__side {
-        height: 50rem;
+        height: 55rem;
         font-size: large;
         transition: all .9s ease;
         position: absolute;
@@ -14,9 +14,10 @@
         left: 0;
         width: 100%;
         border-radius: 1rem;
+        /* The image fits in the card div */
+        overflow: hidden;
         border-top-left-radius: 10rem;
         border-bottom-right-radius: 10rem;
-        padding: 5rem;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         /* 
             If we set this to hidden, it hides the back part of an element.
@@ -43,5 +44,63 @@
 
     &:hover &__side--back {
         transform: rotateY(0deg);
+    }
+    
+    /* Front side styling */
+    &__image {
+        background-size: cover;
+        height: 23rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+
+        &--1 {
+            background-image: url('../img/nat-5.jpg');
+        }
+
+        &--2 {
+            background-image: url('../img/nat-6.jpg');
+        }
+
+        &--3 {
+            background-image: url('../img/nat-7.jpg');
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-white;
+        padding: 5rem;
+        position: absolute;
+        top: 15rem;
+        right: 6rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__heading--span {
+        background-image: linear-gradient(to right bottom, rgba($primary-color-dark, .7), rgba($primary-color-dark, .7));
+        clip-path: fill-box;
+        padding: .9rem;
+    }
+
+    &__details {
+        padding: 5rem;
+        margin: 0 auto;
+        
+        ul {
+            list-style: none;
+            width: 90%;
+
+            li {
+                text-align: center;
+                padding: .9rem;
+
+                &:not(:last-child) {
+                    border-bottom: .5px solid rgba($primary-color-dark, .5);
+                }
+            }
+        }
     }
 }
