@@ -1,0 +1,47 @@
+.card {
+    /* For the rotating effect of the card */
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        height: 50rem;
+        font-size: large;
+        transition: all .9s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 1rem;
+        border-top-left-radius: 10rem;
+        border-bottom-right-radius: 10rem;
+        padding: 5rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        /* 
+            If we set this to hidden, it hides the back part of an element.
+        */
+        backface-visibility: hidden;
+
+        &--front {
+            background-color: $primary-color-light;
+        }
+
+        &--back {
+            background: linear-gradient(to bottom, $primary-color-light, $primary-color-dark);
+            transform: rotateY(180deg);
+            border-radius: 1rem;
+            border-top-right-radius: 10rem;
+            border-bottom-left-radius: 10rem;
+        }
+    }
+
+    /* When we hover the card, we want the side to transform */
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+}
