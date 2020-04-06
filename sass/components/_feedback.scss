@@ -1,0 +1,45 @@
+.feedback {
+    width: 75%;
+    /* 
+        It's a block element inside a block element so we can use margin
+    */
+    margin: 0 auto;
+    padding: 6rem;
+    box-shadow: 0 3rem 6rem rgba($color-black, .5);
+    background-color: $color-white;
+    border-radius: 3px;
+    font-size: $font-size;
+    /* 
+        Change the rectangular design
+        
+        This skews the card and everything inside the card
+    */
+    transform: skewX(-15deg);
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        /* 
+            When using float, we need to define the width and height as well
+        */
+        float: left;
+        /* 
+            Defines where the content floats around the element
+        */
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        /* 
+            We should use transform when using floated elements (not margin or padding)
+        */
+        transform: translateX(-2rem) skewX(15deg);
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__text {
+        transform: skewX(15deg);
+    }
+}
