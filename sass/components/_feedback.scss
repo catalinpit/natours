@@ -15,7 +15,7 @@
         This skews the card and everything inside the card
     */
     transform: skewX(-15deg);
-
+    
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -32,14 +32,53 @@
             We should use transform when using floated elements (not margin or padding)
         */
         transform: translateX(-2rem) skewX(15deg);
+        position: relative;
+        backface-visibility: hidden;
     }
 
     &__img {
-        width: 100%;
         height: 100%;
+        transform: translateX(-4rem) scale(1.5);
+        transition: all .5s;
+        backface-visibility: hidden;
     }
 
     &__text {
         transform: skewX(15deg);
+    }
+
+    &__caption {
+        /* 
+            Center the caption on the image. Need position, top, left, transform
+        */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2rem;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    /* 
+        Display the username when hovering over the element
+    */
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    /* 
+        Creates the zooming effect when hovering over the image
+
+        Also blurs out the image
+    */
+    &:hover &__img {
+        filter: blur(2px);
+        transform: translateX(-4rem) scale(1);
     }
 }
