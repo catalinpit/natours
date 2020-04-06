@@ -29,7 +29,7 @@
         }
 
         &--back {
-            background: linear-gradient(to bottom, $primary-color-light, $primary-color-dark);
+            background: $primary-color-light;
             transform: rotateY(180deg);
             border-radius: 1rem;
             border-top-right-radius: 10rem;
@@ -102,5 +102,29 @@
                 }
             }
         }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $primary-color-dark;
+    }
+
+    &__price-only {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 200;
     }
 }

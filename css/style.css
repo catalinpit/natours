@@ -319,7 +319,7 @@ body {
     .card__side--front {
       background-color: #E6DADA; }
     .card__side--back {
-      background: linear-gradient(to bottom, #E6DADA, #274046);
+      background: #E6DADA;
       transform: rotateY(180deg);
       border-radius: 1rem;
       border-top-right-radius: 10rem;
@@ -365,6 +365,22 @@ body {
         padding: .9rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 0.5px solid rgba(39, 64, 70, 0.5); }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #274046; }
+  .card__price-only {
+    font-size: 1.5rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 200; }
 
 .row {
   /* 
