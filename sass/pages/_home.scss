@@ -32,6 +32,13 @@
 }
 
 .section-feedback {
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($primary-color-light, 0.6), 
+        rgba($primary-color-dark, 0.6)), 
+        url('./../../img/feedback-section.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
     padding: 10rem 0;
-    background-color: $color-grey-light-1;
 }

@@ -79,16 +79,20 @@
         /* Automatically apply the styles up to 0% before the animation starts */
         animation-fill-mode: backwards;
     }
+
+    &-feedback {
+        background-color: $primary-color;
+    }
 }
 
 .btn-text {
     &:link,
     &:visited {
         display: inline-block;
-        color: $primary-color;
+        color: $color-white;
         text-decoration: none;
         border-bottom: 1px solid $primary-color;
-        padding: .5rem;
+        padding: 1rem;
         font-size: $font-size;
         transition: all .3s;
     }

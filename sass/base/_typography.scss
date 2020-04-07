@@ -31,6 +31,16 @@ body {
         animation-name: moveInLeft;
         animation-duration: 2.5s;
         animation-timing-function: ease-in-out;
+
+        &--smaller {
+            font-size: 3.5rem;
+            letter-spacing: 1.5rem;
+            font-weight: 900;
+
+            animation-name: moveInLeft;
+            animation-duration: 2.5s;
+            animation-timing-function: ease-in-out;
+        }
     }
 
     &--sub {

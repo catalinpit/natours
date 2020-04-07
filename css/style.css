@@ -89,6 +89,13 @@ body {
     animation-name: moveInLeft;
     animation-duration: 2.5s;
     animation-timing-function: ease-in-out; }
+    .heading-primary--main--smaller {
+      font-size: 3.5rem;
+      letter-spacing: 1.5rem;
+      font-weight: 900;
+      animation-name: moveInLeft;
+      animation-duration: 2.5s;
+      animation-timing-function: ease-in-out; }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -211,13 +218,15 @@ body {
     animation: moveInBottom 2.5s ease-out .75s;
     /* Automatically apply the styles up to 0% before the animation starts */
     animation-fill-mode: backwards; }
+  .btn-feedback {
+    background-color: #58919e; }
 
 .btn-text:link, .btn-text:visited {
   display: inline-block;
-  color: #58919e;
+  color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #58919e;
-  padding: .5rem;
+  padding: 1rem;
   font-size: 1.6rem;
   transition: all .3s; }
 
@@ -393,7 +402,7 @@ body {
   margin: 0 auto;
   padding: 6rem;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.5);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 3px;
   font-size: 1.6rem;
   /* 
@@ -562,5 +571,8 @@ body {
   padding: 20rem 0 50rem 0; }
 
 .section-feedback {
-  padding: 10rem 0;
-  background-color: #f7f7f7; }
+  background-image: linear-gradient(to right bottom, rgba(230, 218, 218, 0.6), rgba(39, 64, 70, 0.6)), url("./../../img/feedback-section.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  padding: 10rem 0; }
