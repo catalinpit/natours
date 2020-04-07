@@ -576,3 +576,20 @@ body {
   background-position: top;
   position: relative;
   padding: 10rem 0; }
+
+.section-contact {
+  background-image: linear-gradient(to right bottom, #e4e2e2, rgba(228, 226, 226, 0.5));
+  padding: 10rem 0; }
+
+.contact {
+  /* 
+        The gradient from the contact form
+    */
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url("../../img/nat-10.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 50rem; }
+  .contact__form {
+    width: 50%;
+    padding: 5rem; }
