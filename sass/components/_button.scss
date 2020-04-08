@@ -96,6 +96,7 @@
     &:link,
     &:visited {
         display: inline-block;
+        background-color: $primary-color;
         color: $color-white;
         text-decoration: none;
         border-bottom: 1px solid $primary-color;

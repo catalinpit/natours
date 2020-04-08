@@ -234,6 +234,7 @@ body {
 
 .btn-text:link, .btn-text:visited {
   display: inline-block;
+  background-color: #58919e;
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #58919e;
