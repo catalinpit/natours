@@ -629,7 +629,7 @@ body {
   padding: 20rem 0 50rem 0; }
 
 .section-feedback {
-  background-image: linear-gradient(to right bottom, rgba(230, 218, 218, 0.6), rgba(39, 64, 70, 0.6)), url("./../../img/feedback-section.jpg");
+  background-image: linear-gradient(to right bottom, rgba(230, 218, 218, 0.6), rgba(39, 64, 70, 0.6)), url("./../img/feedback-section.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -643,7 +643,7 @@ body {
   /* 
         The gradient from the contact form
     */
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url("../../img/nat-10.jpg");
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url("./../img/nat-10.jpg");
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);

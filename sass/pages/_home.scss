@@ -36,7 +36,7 @@
         to right bottom, 
         rgba($primary-color-light, 0.6), 
         rgba($primary-color-dark, 0.6)), 
-        url('./../../img/feedback-section.jpg');
+        url('./../img/feedback-section.jpg');
     background-size: cover;
     background-position: top;
     position: relative;
@@ -57,7 +57,7 @@
     */
     background-image: 
         linear-gradient(105deg, rgba($color-white, .7) 0%, rgba($color-white, .7) 50%, transparent 50%),
-        url('../../img/nat-10.jpg');
+        url('./../img/nat-10.jpg');
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
