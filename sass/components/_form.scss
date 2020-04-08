@@ -1,6 +1,6 @@
 .form {
     &__group:not(:last-child) {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     &__input {
@@ -14,6 +14,7 @@
         border-bottom: 3px solid transparent;
         width: 80%;
         display: block;
+        transition: all .3s;
 
         &:focus {
             /* 
@@ -32,9 +33,9 @@
             border-bottom: 3px solid $color-invalid-input;
         }
 
-        &::-webkit-input-placeholder {
-            background-color: $color-grey-dark-2;
-        }
+        // &::-webkit-input-placeholder {
+        //     background-color: $color-grey-dark-2;
+        // }
     }
 
     /* 

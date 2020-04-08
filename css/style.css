@@ -133,13 +133,20 @@ body {
   text-align: center; }
 
 .u-margin-top-big {
-  margin-top: 9rem; }
+  margin-top: 9rem !important; }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-bottom-small {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
+
+.u-margin-bottom-small-negative {
+  margin-bottom: -2rem !important; }
+
+.reset-margin-padding {
+  margin-top: 1rem !important;
+  margin-left: 12rem !important; }
 
 .card-1 {
   background: white;
@@ -171,7 +178,7 @@ body {
         For an ::after element to appear on the page,
         we need to specify its content property.
     */ }
-  .btn:link, .btn:visited {
+  .btn, .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -180,14 +187,18 @@ body {
     border-radius: 5rem;
     transition: all .2s;
     position: relative;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    /* Changes for the <button> element */
+    border: none;
+    cursor: pointer; }
   .btn:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
     .btn:hover::after {
       transform: scaleX(1.2) scaleY(1.4);
       opacity: 0; }
-  .btn:active {
+  .btn:active, .btn:focus {
+    outline: none;
     transform: translateY(-0.1rem); }
   .btn--white {
     background-color: #fff;
@@ -472,7 +483,7 @@ body {
         If the element was further down the page, we would use ~
     */ }
   .form__group:not(:last-child) {
-    margin-bottom: 2rem; }
+    margin-bottom: 1rem; }
   .form__input {
     font-size: 1.5rem;
     font-family: inherit;
@@ -484,6 +495,7 @@ body {
     border-bottom: 3px solid transparent;
     width: 80%;
     display: block;
+    transition: all .3s;
     /*
             When the input is invalid, show a red border at the bottom
         */ }
@@ -497,8 +509,6 @@ body {
       border-bottom: 3px solid #58919e; }
     .form__input:focus:invalid {
       border-bottom: 3px solid #e05735; }
-    .form__input::-webkit-input-placeholder {
-      background-color: #999; }
   .form__input:placeholder-shown + .form__label {
     opacity: 0;
     visibility: hidden;
@@ -637,7 +647,8 @@ body {
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem; }
+  height: 55rem; }
   .contact__form {
     width: 50%;
-    padding: 5rem; }
+    padding-left: 5rem;
+    padding-top: .5rem; }
