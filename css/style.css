@@ -466,6 +466,54 @@ body {
     filter: blur(2px);
     transform: translateX(-4rem) scale(1); }
 
+.form {
+  /* 
+        The + sign allows us to select an adjacent element
+        If the element was further down the page, we would use ~
+    */ }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 80%;
+    display: block;
+    /*
+            When the input is invalid, show a red border at the bottom
+        */ }
+    .form__input:focus {
+      /* 
+                Remove the default blue outline from the input
+                Add box shadow and border bottom instead
+            */
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      border-bottom: 3px solid #58919e; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #e05735; }
+    .form__input::-webkit-input-placeholder {
+      background-color: #999; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+  .form__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    /* 
+            We need to set the display to block so we can use the box model properties
+        */
+    display: block;
+    transition: all .3s; }
+
 .row {
   /* 
         If there is enough available space,
