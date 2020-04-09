@@ -606,6 +606,22 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
+.footer {
+  background-color: #274046;
+  color: #fff; }
+  .footer__logo-box {
+    text-align: center;
+    padding: 8rem; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 2rem; }
+
 .section-about {
   height: 100vh;
   padding: 20rem 0; }
