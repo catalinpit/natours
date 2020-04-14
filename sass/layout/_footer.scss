@@ -1,10 +1,12 @@
 .footer {
     background-color: $primary-color-dark;
-    color: $color-white;
+    color: $color-grey-light-1;
+    padding: 10rem 0;
+    font-size: 1.4rem;
 
     &__logo-box {
         text-align: center;
-        padding: 8rem;
+        margin-bottom: 8rem;
     }
 
     &__logo {
@@ -13,7 +15,9 @@
     }
 
     &__navigation {
-
+        border-top: 1px solid $color-grey-light-1;
+        padding-top: 2rem;
+        display: inline-block;
     }
 
     &__list {
@@ -29,6 +33,28 @@
     }
 
     &__link {
+        &:link,
+        &:visited {
+            background-color: $primary-color-dark;
+            color: $color-grey-light-1;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 2s;
+        }
 
+        &:hover,
+        &:active {
+            color: $primary-color;
+            box-shadow: 0 1.5rem 2rem rgba($color-black, .4);
+            transform: rotate(10deg) scale(1.5);
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid $color-grey-light-1;
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
     }
 }
