@@ -570,6 +570,70 @@ body {
 .grid-test {
   margin-top: 8rem; }
 
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 11rem;
+  width: 11rem;
+  position: fixed;
+  top: 10rem;
+  right: 10rem;
+  border-radius: 50%;
+  z-index: 2000; }
+
+.navigation__background {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  /* 
+            The button stays in the same place regardless of where you are in the page
+            The button moves with you as you scroll up and down
+        */
+  position: fixed;
+  top: 10.5rem;
+  right: 10.5rem;
+  background-image: radial-gradient(#E6DADA, #274046);
+  z-index: 1000;
+  transform: scale(100); }
+
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center; }
+
+.navigation__item {
+  margin: 2rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, #274046 0%, #274046 50%, #fff 50%);
+  background-size: 250%;
+  transition: all 1.5s; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 90%;
+  color: #274046;
+  transform: translateY(-1rem); }
+
 .header {
   /*
         At every point, the height of this box (element) should be 95% of the viewport height
