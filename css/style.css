@@ -575,36 +575,42 @@ body {
 
 .navigation__button {
   background-color: #fff;
-  height: 11rem;
-  width: 11rem;
+  height: 7rem;
+  width: 7rem;
   position: fixed;
-  top: 10rem;
-  right: 10rem;
+  top: 6rem;
+  right: 6rem;
   border-radius: 50%;
-  z-index: 2000; }
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
 
 .navigation__background {
-  height: 10rem;
-  width: 10rem;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
   /* 
             The button stays in the same place regardless of where you are in the page
             The button moves with you as you scroll up and down
         */
   position: fixed;
-  top: 10.5rem;
-  right: 10.5rem;
+  top: 6.5rem;
+  right: 6.5rem;
   background-image: radial-gradient(#E6DADA, #274046);
   z-index: 1000;
-  transform: scale(100); }
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
 
 .navigation__nav {
   height: 100vh;
-  width: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1500; }
+  z-index: 1500;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  /*
+            Hide the navigation
+        */
+  opacity: 0;
+  width: 0; }
 
 .navigation__list {
   position: absolute;
@@ -633,6 +639,13 @@ body {
   background-position: 90%;
   color: #274046;
   transform: translateY(-1rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(100); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
 
 .header {
   /*
