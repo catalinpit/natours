@@ -570,82 +570,112 @@ body {
 .grid-test {
   margin-top: 8rem; }
 
-.navigation__checkbox {
-  display: none; }
-
-.navigation__button {
-  background-color: #fff;
-  height: 7rem;
-  width: 7rem;
-  position: fixed;
-  top: 6rem;
-  right: 6rem;
-  border-radius: 50%;
-  z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
-
-.navigation__background {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
+.navigation {
   /* 
+        Functionality for opening/closing the menu
+    */
+  /* Menu icon */ }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    background-color: #fff;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+    cursor: pointer; }
+  .navigation__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    /* 
             The button stays in the same place regardless of where you are in the page
             The button moves with you as you scroll up and down
         */
-  position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
-  background-image: radial-gradient(#E6DADA, #274046);
-  z-index: 1000;
-  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
-
-.navigation__nav {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1500;
-  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  /*
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(#E6DADA, #274046);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  .navigation__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    /*
             Hide the navigation
         */
-  opacity: 0;
-  width: 0; }
-
-.navigation__list {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center; }
-
-.navigation__item {
-  margin: 2rem; }
-
-.navigation__link:link, .navigation__link:visited {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 3rem;
-  font-weight: 300;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  background-image: linear-gradient(120deg, #274046 0%, #274046 50%, #fff 50%);
-  background-size: 250%;
-  transition: all 1.5s; }
-
-.navigation__link:hover, .navigation__link:active {
-  background-position: 90%;
-  color: #274046;
-  transform: translateY(-1rem); }
-
-.navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(100); }
-
-.navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1;
-  width: 100%; }
+    opacity: 0;
+    width: 0; }
+  .navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center; }
+  .navigation__item {
+    margin: 2rem; }
+  .navigation__link:link, .navigation__link:visited {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, #274046 0%, #274046 50%, #fff 50%);
+    background-size: 250%;
+    transition: all 1.5s; }
+  .navigation__link:hover, .navigation__link:active {
+    background-position: 90%;
+    color: #274046;
+    transform: translateY(-1rem); }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(100); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 100%; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 3.5rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      display: inline-block;
+      width: 3rem;
+      height: 2px;
+      background-color: #274046; }
+    .navigation__icon::before, .navigation__icon::after {
+      /* 
+                We need to set the content for the before and after to appear on the page
+            */
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .navigation__icon::before {
+      top: -.7rem; }
+    .navigation__icon::after {
+      top: .7rem; }
+  .navigation__button:hover .navigation__icon::before {
+    top: -1rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
 
 .header {
   /*
