@@ -1,5 +1,5 @@
-# natours
- Natours Project 🌍🌎🌏
+# PITDECORS
+ PITDECORS project - A landing page for furniture sellers 🛋️
 
 [Live Preview](https://catalinpit.github.io/natours/) 🚀
 
@@ -8,7 +8,7 @@
 *The application might look different from the one from the tutorial. I am trying to change it as much as possible.* 👀
 
 # TABLE OF CONTENTS
-- [natours](#natours)
+- [PITDECORS](#pitdecors)
 - [TABLE OF CONTENTS](#table-of-contents)
 - [THE THREE PILLARS TO WRITE GOOD HTML AND CSS](#the-three-pillars-to-write-good-html-and-css)
 - [HOW CSS WORKS: A LOOK BEHIND THE SCENES](#how-css-works-a-look-behind-the-scenes)
