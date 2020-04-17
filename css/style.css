@@ -5,6 +5,15 @@
 /* 
     Append a pseudo-element after the element which will then clear these floats
 */
+/* MEDIA QUERIES */
+/*
+    0 - 600px => Phone
+    600 - 900px => Tablet portrait
+    900-1200px => Tablet landscape
+    1800px+ => Big desktop
+
+    1em = 16px
+*/
 /* 
     Normalize the CSS to make every browser render the page in the exact same way 
     The universal selector selects every element on the webpage and apply the declarations
@@ -17,8 +26,24 @@
   box-sizing: inherit; }
 
 html {
-  /* This defines what 1 REM is */
+  /* 
+        This defines what 1 REM is
+        1 REM = 10 pixels 
+        10px/16px = 62.5%
+    */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 /*
     The parent element of all the other elements
