@@ -32,6 +32,16 @@ body {
         animation-duration: 2.5s;
         animation-timing-function: ease-in-out;
 
+        @include respond(tab-port) {
+            letter-spacing: 2rem;
+            font-size: 5rem;
+        }
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 4rem;
+        }
+
         &--smaller {
             font-size: 3.5rem;
             letter-spacing: 1.5rem;
@@ -40,6 +50,14 @@ body {
             animation-name: moveInLeft;
             animation-duration: 2.5s;
             animation-timing-function: ease-in-out;
+
+            @include respond(tab-port) {
+                letter-spacing: 1rem;
+            }
+
+            @include respond(phone) {
+                letter-spacing: 1rem;
+            }
         }
     }
 
@@ -50,6 +68,10 @@ body {
         letter-spacing: 1.75rem;
     
         animation: moveInRight 2.5s ease-in-out;
+
+        @include respond(phone) {
+            letter-spacing: .75rem;
+        }
     }
 }
 
@@ -69,6 +91,10 @@ body {
     &:hover {
         transform: skewX(10deg) skewY(.5deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+    @include respond(phone) {
+        font-size: 4rem;
     }
 }
 

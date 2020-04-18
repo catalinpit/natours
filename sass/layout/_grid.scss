@@ -19,6 +19,14 @@
         margin-bottom: $gutter-vertical;
     }
 
+    @include respond(tab-port) {
+        max-width: 50rem;
+    }
+
+    @include respond(phone) {
+        max-width: 50rem;
+    }
+
     @include clearfix;
 
     /*
@@ -29,6 +37,24 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal; 
+
+            @include respond(tab-port) {
+                margin-right: 0;
+            }
+        
+            @include respond(phone) {
+                margin-right: 0;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
+            margin-bottom: $gutter-vertical-small !important;
+        }
+    
+        @include respond(phone) {
+            width: 100% !important;
+            margin-bottom: $gutter-vertical-small !important;
         }
     }
 

@@ -13,6 +13,9 @@
     1800px+ => Big desktop
 
     1em = 16px
+
+    ORDER:
+        base + typography > general layout + grid > page layout > components
 */
 /* 
     Normalize the CSS to make every browser render the page in the exact same way 
@@ -114,6 +117,14 @@ body {
     animation-name: moveInLeft;
     animation-duration: 2.5s;
     animation-timing-function: ease-in-out; }
+    @media (max-width: 56.25em) {
+      .heading-primary--main {
+        letter-spacing: 2rem;
+        font-size: 5rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 4rem; } }
     .heading-primary--main--smaller {
       font-size: 3.5rem;
       letter-spacing: 1.5rem;
@@ -121,12 +132,21 @@ body {
       animation-name: moveInLeft;
       animation-duration: 2.5s;
       animation-timing-function: ease-in-out; }
+      @media (max-width: 56.25em) {
+        .heading-primary--main--smaller {
+          letter-spacing: 1rem; } }
+      @media (max-width: 37.5em) {
+        .heading-primary--main--smaller {
+          letter-spacing: 1rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 2.5s ease-in-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .75rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -143,6 +163,9 @@ body {
   .heading-secondary:hover {
     transform: skewX(10deg) skewY(0.5deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 4rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -645,6 +668,12 @@ body {
     */ }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
+  @media (max-width: 37.5em) {
+    .row {
+      max-width: 50rem; } }
   .row::after {
     content: "";
     display: table;
@@ -653,6 +682,20 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 7rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0; } }
+      @media (max-width: 37.5em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important;
+        margin-bottom: 6rem !important; } }
+    @media (max-width: 37.5em) {
+      .row [class^="col-"] {
+        width: 100% !important;
+        margin-bottom: 6rem !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 7rem) / 2); }
   .row .col-1-of-3 {
@@ -688,6 +731,14 @@ body {
     text-align: center;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
     cursor: pointer; }
+    @media (max-width: 56.25em) {
+      .navigation__button {
+        top: 3.5rem;
+        right: 3.5rem; } }
+    @media (max-width: 37.5em) {
+      .navigation__button {
+        top: 3.5rem;
+        right: 3.5rem; } }
   .navigation__background {
     height: 6rem;
     width: 6rem;
@@ -702,6 +753,14 @@ body {
     background-image: radial-gradient(#E6DADA, #274046);
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+    @media (max-width: 56.25em) {
+      .navigation__background {
+        top: 4rem;
+        right: 4rem; } }
+    @media (max-width: 37.5em) {
+      .navigation__background {
+        top: 4rem;
+        right: 4rem; } }
   .navigation__nav {
     height: 100vh;
     position: fixed;
@@ -817,6 +876,12 @@ body {
   color: #e4e2e2;
   padding: 10rem 0;
   font-size: 1.4rem; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
+  @media (max-width: 37.5em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
@@ -827,6 +892,14 @@ body {
     border-top: 1px solid #e4e2e2;
     padding-top: 2rem;
     display: inline-block; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
+    @media (max-width: 37.5em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -849,6 +922,14 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: right; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
+    @media (max-width: 37.5em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .section-about {
   height: 100vh;
@@ -871,7 +952,7 @@ body {
     transform: skewY(7deg); }
 
 .section-furniture {
-  padding: 20rem 0 50rem 0; }
+  padding: 20rem 0 20rem 0; }
 
 .section-feedback {
   background-image: linear-gradient(to right bottom, rgba(230, 218, 218, 0.6), rgba(39, 64, 70, 0.6)), url("./../img/feedback-section.jpg");
