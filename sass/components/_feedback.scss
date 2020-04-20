@@ -15,6 +15,18 @@
         This skews the card and everything inside the card
     */
     transform: skewX(-15deg);
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 5rem;
+    }
+    
+    @include respond(phone) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 5rem;
+    }
     
     &__shape {
         width: 15rem;

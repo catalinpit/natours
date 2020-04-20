@@ -77,6 +77,14 @@
         right: 6rem;
         text-align: center;
         width: 100%;
+
+        @include respond(tab-port) {
+            right: 10rem;
+        }
+        
+        @include respond(phone) {
+            right: 10rem;
+        }
     }
 
     &__heading--span {
@@ -126,5 +134,29 @@
     &__price-value {
         font-size: 6rem;
         font-weight: 200;
+    }
+
+    @include respond(tab-port) {
+        height: auto;
+        border-radius: 1rem;
+
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+        }
+    }
+
+    @include respond(phone) {
+        height: auto;
+        border-radius: 1rem;
+
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        }
     }
 }

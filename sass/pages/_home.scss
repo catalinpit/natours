@@ -1,7 +1,14 @@
 .section-about {
     height: 100vh;
     padding: 20rem 0;
-    //color: $color-white;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+    
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
 }
 
 .section-features {
@@ -25,10 +32,28 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+        margin-top: 0;
+    }
+    
+    @include respond(phone) {
+        padding: 10rem 0;
+        margin-top: 0;
+    }
 }
 
 .section-furniture {
     padding: 20rem 0 20rem 0;
+
+    @include respond(tab-port) {
+        padding: 10rem 0 10rem 0;
+    }
+    
+    @include respond(phone) {
+        padding: 10rem 0 10rem 0;
+    }
 }
 
 .section-feedback {
