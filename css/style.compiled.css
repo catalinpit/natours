@@ -35,16 +35,16 @@ html {
         10px/16px = 62.5%
     */
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
+  @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
-  @media only screen and (min-width: 112.5em) {
+  @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
@@ -57,10 +57,6 @@ body {
         the total width or the total height that we specify for a box.
     */
   box-sizing: border-box; }
-
-::selection {
-  background-color: #58919e;
-  color: #fff; }
 
 /* ANIMATIONS */
 @keyframes moveInLeft {
@@ -121,11 +117,11 @@ body {
     animation-name: moveInLeft;
     animation-duration: 2.5s;
     animation-timing-function: ease-in-out; }
-    @media only screen and (max-width: 56.25em) {
+    @media (max-width: 56.25em) {
       .heading-primary--main {
         letter-spacing: 2rem;
         font-size: 5rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: 1rem;
         font-size: 4rem; } }
@@ -136,10 +132,10 @@ body {
       animation-name: moveInLeft;
       animation-duration: 2.5s;
       animation-timing-function: ease-in-out; }
-      @media only screen and (max-width: 56.25em) {
+      @media (max-width: 56.25em) {
         .heading-primary--main--smaller {
           letter-spacing: 1rem; } }
-      @media only screen and (max-width: 37.5em) {
+      @media (max-width: 37.5em) {
         .heading-primary--main--smaller {
           letter-spacing: 1rem; } }
   .heading-primary--sub {
@@ -148,7 +144,7 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 2.5s ease-in-out; }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: .75rem; } }
 
@@ -167,10 +163,10 @@ body {
   .heading-secondary:hover {
     transform: skewX(10deg) skewY(0.5deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .heading-secondary {
       font-size: 2.8rem; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2.8rem; } }
 
@@ -195,19 +191,19 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .u-margin-bottom-big {
       margin-bottom: 4rem !important; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .u-margin-bottom-big {
       margin-bottom: 4rem !important; } }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .u-margin-bottom-medium {
       margin-bottom: 2rem !important; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .u-margin-bottom-medium {
       margin-bottom: 2rem !important; } }
 
@@ -448,10 +444,10 @@ body {
     right: 6rem;
     text-align: center;
     width: 100%; }
-    @media only screen and (max-width: 56.25em) {
+    @media (max-width: 56.25em) {
       .card__heading {
         right: 10rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .card__heading {
         right: 10rem; } }
   .card__heading--span {
@@ -485,7 +481,7 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 200; }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .card {
       height: auto;
       border-radius: 1rem; }
@@ -493,7 +489,7 @@ body {
         height: auto;
         position: relative;
         box-shadow: none; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .card {
       height: auto;
       border-radius: 1rem; }
@@ -528,12 +524,12 @@ body {
 
         Also blurs out the image
     */ }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .feedback {
       width: 100%;
       padding: 4rem;
       padding-left: 5rem; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .feedback {
       width: 100%;
       padding: 4rem;
@@ -725,10 +721,10 @@ body {
     */ }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .row {
       max-width: 50rem; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .row {
       max-width: 50rem; } }
   .row::after {
@@ -739,17 +735,17 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 7rem; }
-      @media only screen and (max-width: 56.25em) {
+      @media (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0; } }
-      @media only screen and (max-width: 37.5em) {
+      @media (max-width: 37.5em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0; } }
-    @media only screen and (max-width: 56.25em) {
+    @media (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important;
         margin-bottom: 6rem !important; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .row [class^="col-"] {
         width: 100% !important;
         margin-bottom: 6rem !important; } }
@@ -788,11 +784,11 @@ body {
     text-align: center;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
     cursor: pointer; }
-    @media only screen and (max-width: 56.25em) {
+    @media (max-width: 56.25em) {
       .navigation__button {
         top: 3.5rem;
         right: 3.5rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .navigation__button {
         top: 3.5rem;
         right: 3.5rem; } }
@@ -810,11 +806,11 @@ body {
     background-image: radial-gradient(#E6DADA, #274046);
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
-    @media only screen and (max-width: 56.25em) {
+    @media (max-width: 56.25em) {
       .navigation__background {
         top: 4rem;
         right: 4rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .navigation__background {
         top: 4rem;
         right: 4rem; } }
@@ -933,19 +929,19 @@ body {
   color: #e4e2e2;
   padding: 10rem 0;
   font-size: 1.4rem; }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .footer {
       padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
-    @media only screen and (max-width: 56.25em) {
+    @media (max-width: 56.25em) {
       .footer__logo-box {
         margin-bottom: 5rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .footer__logo-box {
         margin-bottom: 5rem; } }
   .footer__logo {
@@ -955,11 +951,11 @@ body {
     border-top: 1px solid #e4e2e2;
     padding-top: 2rem;
     display: inline-block; }
-    @media only screen and (max-width: 56.25em) {
+    @media (max-width: 56.25em) {
       .footer__navigation {
         width: 100%;
         text-align: center; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .footer__navigation {
         width: 100%;
         text-align: center; } }
@@ -985,11 +981,11 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: right; }
-    @media only screen and (max-width: 56.25em) {
+    @media (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
         float: none; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .footer__copyright {
         width: 100%;
         float: none; } }
@@ -997,10 +993,10 @@ body {
 .section-about {
   height: 100vh;
   padding: 20rem 0; }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .section-about {
       padding: 10rem 0; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .section-about {
       padding: 10rem 0; } }
 
@@ -1019,21 +1015,21 @@ body {
     */ }
   .section-features > * {
     transform: skewY(7deg); }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .section-features {
       padding: 10rem 0;
       margin-top: 0; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .section-features {
       padding: 10rem 0;
       margin-top: 0; } }
 
 .section-furniture {
   padding: 20rem 0 20rem 0; }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .section-furniture {
       padding: 10rem 0 10rem 0; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .section-furniture {
       padding: 10rem 0 10rem 0; } }
 

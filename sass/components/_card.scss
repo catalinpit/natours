@@ -22,6 +22,7 @@
         /* 
             If we set this to hidden, it hides the back part of an element.
         */
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
 
         &--front {

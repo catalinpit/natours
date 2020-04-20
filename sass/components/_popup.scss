@@ -8,6 +8,11 @@
     z-index: 9999;
     transition: all .3s;
 
+    @supports (-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
+        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1rem);
+    }
+
     /*
         Hide the popup initially
     */

@@ -45,3 +45,8 @@ body {
     */
     box-sizing: border-box;
 }
+
+::selection {
+    background-color: $primary-color;
+    color: $color-white;
+}
